@@ -1,0 +1,11 @@
+USE gamesdb;
+
+CREATE TABLE games (
+  id INT(12) NOT NULL AUTO_INCREMENT,
+  title VARCHAR(40) DEFAULT NULL,
+  genre VARCHAR(40) DEFAULT NULL,
+  price INT(12) DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+DESCRIBE games;
