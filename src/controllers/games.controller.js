@@ -29,7 +29,7 @@ export const getGame = async (req, res) => {
   }
 };
 
-export const createGames = async (req, res) => {
+export const createGame = async (req, res) => {
   const { title, genre, price } = req.body;
   try {
     const [rows] = await pool.query(
@@ -49,7 +49,7 @@ export const createGames = async (req, res) => {
   }
 };
 
-export const updateGames = async (req, res) => {
+export const updateGame = async (req, res) => {
   const { id } = req.params;
   const { title, genre, price } = req.body;
   try {
@@ -70,7 +70,7 @@ export const updateGames = async (req, res) => {
   }
 };
 
-export const deleteGames = async (req, res) => {
+export const deleteGame = async (req, res) => {
   try {
     const [result] = await pool.query("DELETE FROM games WHERE id = ?", [
       req.params.id,

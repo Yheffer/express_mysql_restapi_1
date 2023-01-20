@@ -1,16 +1,22 @@
-import {application, Router} from 'express';
-import {getGames, getGame, createGames, updateGames, deleteGames} from '../controllers/games.controller.js';
+import { Router } from "express";
+import {
+  getGames,
+  getGame,
+  createGame,
+  updateGame,
+  deleteGame,
+} from "../controllers/games.controller.js";
 
 const router = Router();
 
-router.get("/games", getGames)
+router.get("/games", getGames);
 
-router.get("/games/:id", getGame)
+router.get("/games/:id", getGame);
 
-router.post("/games", createGames)
+router.post("/games", createGame);
 
-router.patch("/games/:id", updateGames)
+router.patch("/games/:id", updateGame);
 
-router.delete("/games/:id", deleteGames)
+router.delete("/games/:id", deleteGame);
 
-export default router
+export default router;
